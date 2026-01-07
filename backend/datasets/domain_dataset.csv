@@ -1,0 +1,17 @@
+query,domain
+What is CGPA?,STUDENT
+What is GPA?,STUDENT
+Attendance requirement?,STUDENT
+Calculate CGPA,STUDENT
+Calculate attendance percentage,STUDENT
+Explain machine learning,STUDENT
+Explain deep learning,STUDENT
+Explain semester system,STUDENT
+Difference between CGPA and GPA,STUDENT
+Predict exam marks,STUDENT
+Capital of India,OUT_OF_DOMAIN
+Prime Minister of India,OUT_OF_DOMAIN
+Stock market prediction,OUT_OF_DOMAIN
+Movie recommendation,OUT_OF_DOMAIN
+Weather today,OUT_OF_DOMAIN
+Football match score,OUT_OF_DOMAIN

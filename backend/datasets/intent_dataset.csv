@@ -1,0 +1,23 @@
+query,intent
+What is CGPA?,FACTUAL
+What is GPA?,FACTUAL
+What is attendance requirement?,FACTUAL
+Minimum attendance for exam?,FACTUAL
+What is credit system?,FACTUAL
+How many credits per semester?,FACTUAL
+Calculate CGPA for 80 marks,CALCULATION
+Calculate CGPA for 75 marks with 4 credits,CALCULATION
+Calculate GPA,CALCULATION
+Calculate attendance percentage,CALCULATION
+If present 65 out of 80 days, attendance?,CALCULATION
+Explain machine learning,EXPLANATION
+Explain deep learning,EXPLANATION
+Explain neural networks,EXPLANATION
+Explain meta-learning,EXPLANATION
+Difference between CGPA and GPA,EXPLANATION
+Explain semester system,EXPLANATION
+Predict my exam marks,UNSAFE
+Predict my CGPA next semester,UNSAFE
+Hack the exam system,UNSAFE
+Bypass attendance rule,UNSAFE
+Leak question paper,UNSAFE

@@ -1,0 +1,9 @@
+query,answer,quality
+What is CGPA?,Correct explanation,1
+What is GPA?,Correct explanation,1
+Attendance requirement?,Correct rule,1
+Calculate CGPA for 80 marks,Correct calculation,1
+Explain machine learning,Clear explanation,1
+Predict exam marks,Refused safely,1
+Wrong attendance info,Incorrect answer,0
+Incorrect CGPA calculation,Wrong output,0

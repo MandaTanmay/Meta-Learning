@@ -29,72 +29,59 @@ export function ModelEvaluationDashboard() {
   const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
-    // Simulate API call to fetch metrics
     const fetchMetrics = async () => {
       try {
-        // Replace with actual API call: const res = await fetch('/api/model-metrics')
-        // const data = await res.json()
-
-        // Mock data
-        const mockData: DashboardData = {
+        const [domainRes, intentRes, qualityRes] = await Promise.all([
+          fetch("http://localhost:8000/metrics/domain"),
+          fetch("http://localhost:8000/metrics/intent"),
+          fetch("http://localhost:8000/metrics/quality")
+        ])
+        const [domain, intent, quality] = await Promise.all([
+          domainRes.json(),
+          intentRes.json(),
+          qualityRes.json()
+        ])
+        setData({
           domainClassification: {
-            accuracy: 0.96,
-            precision: 0.94,
-            recall: 0.95,
-            f1Score: 0.945,
-            confusionMatrix: [
-              [485, 15, 0],
-              [10, 478, 12],
-              [0, 8, 492],
-            ],
-            lastEvaluated: "2025-01-07",
-            modelVersion: "v2.3.1",
-            datasetSize: 2000,
-            explanation:
-              "These metrics evaluate how accurately the domain classification model identifies whether queries belong to the student domain or external resources.",
+            accuracy: domain.accuracy ?? 0,
+            precision: domain.precision ?? 0,
+            recall: domain.recall ?? 0,
+            f1Score: domain.f1_score ?? 0,
+            confusionMatrix: domain.confusion_matrix ?? [[0,0],[0,0]],
+            lastEvaluated: domain.last_evaluated ?? "-",
+            modelVersion: domain.model_version ?? "-",
+            datasetSize: domain.dataset_size ?? 0,
+            explanation: domain.explanation ?? "Domain classification metrics."
           },
           intentClassification: {
-            accuracy: 0.92,
-            precision: 0.91,
-            recall: 0.9,
-            f1Score: 0.905,
-            confusionMatrix: [
-              [412, 28, 10],
-              [22, 458, 20],
-              [8, 15, 527],
-            ],
-            lastEvaluated: "2025-01-07",
-            modelVersion: "v1.8.4",
-            datasetSize: 1800,
-            explanation:
-              "These metrics evaluate the accuracy of intent classification, which determines whether the query seeks conceptual understanding, exam preparation, or calculation support.",
+            accuracy: intent.accuracy ?? 0,
+            precision: intent.precision ?? 0,
+            recall: intent.recall ?? 0,
+            f1Score: intent.f1_score ?? 0,
+            confusionMatrix: intent.confusion_matrix ?? [[0,0],[0,0]],
+            lastEvaluated: intent.last_evaluated ?? "-",
+            modelVersion: intent.model_version ?? "-",
+            datasetSize: intent.dataset_size ?? 0,
+            explanation: intent.explanation ?? "Intent classification metrics."
           },
           answerQuality: {
-            accuracy: 0.89,
-            precision: 0.88,
-            recall: 0.89,
-            f1Score: 0.885,
-            confusionMatrix: [
-              [356, 44, 0],
-              [38, 512, 50],
-              [0, 28, 572],
-            ],
-            lastEvaluated: "2025-01-07",
-            modelVersion: "v3.1.2",
-            datasetSize: 1600,
-            explanation:
-              "These metrics predict answer quality, measuring how well the model identifies high-confidence, verified responses before presenting them to users.",
-          },
-        }
-
-        setData(mockData)
+            accuracy: quality.accuracy ?? 0,
+            precision: quality.precision ?? 0,
+            recall: quality.recall ?? 0,
+            f1Score: quality.f1_score ?? 0,
+            confusionMatrix: quality.confusion_matrix ?? [[0,0],[0,0]],
+            lastEvaluated: quality.last_evaluated ?? "-",
+            modelVersion: quality.model_version ?? "-",
+            datasetSize: quality.dataset_size ?? 0,
+            explanation: quality.explanation ?? "Answer quality metrics."
+          }
+        })
       } catch (error) {
         console.error("Failed to fetch model metrics:", error)
       } finally {
         setIsLoading(false)
       }
     }
-
     fetchMetrics()
   }, [])
 

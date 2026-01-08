@@ -13,11 +13,14 @@ class RetrievalEngine:
         self.threshold = threshold
         self.knowledge_base = self._load_knowledge_base()
         self.vectorizer = TfidfVectorizer(stop_words="english")
-        self.tfidf_matrix = self.vectorizer.fit_transform([entry["question"] for entry in self.knowledge_base])
+        # Only use entries with a 'question' key for TF-IDF fitting
+        self.qa_entries = [entry for entry in self.knowledge_base if "question" in entry]
+        self.tfidf_matrix = self.vectorizer.fit_transform([entry["question"] for entry in self.qa_entries])
 
     def _load_knowledge_base(self):
         with open(DATA_PATH, "r") as file:
-            return json.load(file)
+            data = json.load(file)
+            return data["facts"]
 
     def retrieve(self, query):
         query_vec = self.vectorizer.transform([query])
@@ -28,13 +31,25 @@ class RetrievalEngine:
         if max_sim < self.threshold:
             return {
                 "answer": "I'm sorry, I cannot confidently answer this question.",
-                "confidence": max_sim,
+                "confidence": float(max_sim),
                 "source": None,
             }
 
-        best_match = self.knowledge_base[max_sim_index]
+        best_match = self.qa_entries[max_sim_index]
+        answer = best_match["answer"]
+        # Block tautological or generic answers
+        if (
+            answer.strip().lower() == query.strip().lower() or
+            len(answer.strip()) < 10 or
+            answer.strip().lower() in ["i don't know", "not sure", "unknown", "no answer"]
+        ):
+            return {
+                "answer": "I'm sorry, I cannot confidently answer this question.",
+                "confidence": float(max_sim),
+                "source": None,
+            }
         return {
-            "answer": best_match["answer"],
-            "confidence": max_sim,
-            "source": best_match["category"],
+            "answer": answer,
+            "confidence": float(max_sim),
+            "source": best_match.get("category", None),
         }

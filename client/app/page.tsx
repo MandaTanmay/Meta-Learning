@@ -26,21 +26,36 @@ export default function DashboardPage() {
 
   const handleQuery = async (query: string) => {
     setIsLoading(true)
-    // Simulate API call
-    setTimeout(() => {
-      const mockResponse: QueryResponse = {
-        answer: `Based on the curriculum standards, the answer to "${query}" involves understanding key concepts from the core material. The detailed explanation below breaks down the fundamental principles and their applications in academic context.`,
-        domain: "Student Domain",
-        intent: "Conceptual Understanding",
-        engine: "Retrieval + Explanation",
-        confidence: 0.94,
-        verified: true,
-        inScope: Math.random() > 0.3,
-      }
-      setResponse(mockResponse)
+    try {
+      const res = await fetch("http://localhost:8000/query", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ query })
+      })
+      const data = await res.json()
+      // Map backend response to QueryResponse shape for UI
+      setResponse({
+        answer: data.answer,
+        domain: data.domain,
+        intent: data.intent,
+        engine: data.engine_used,
+        confidence: data.confidence,
+        verified: data.quality !== "RISKY",
+        inScope: data.domain === "STUDENT"
+      })
       setQueryHistory([query, ...queryHistory.slice(0, 4)])
-      setIsLoading(false)
-    }, 1200)
+    } catch (e) {
+      setResponse({
+        answer: "Error contacting backend.",
+        domain: "ERROR",
+        intent: "ERROR",
+        engine: "ERROR",
+        confidence: 0,
+        verified: false,
+        inScope: false
+      })
+    }
+    setIsLoading(false)
   }
 
   return (

@@ -21,6 +21,23 @@ interface ResponsePanelProps {
 export function ResponsePanel({ response }: ResponsePanelProps) {
   const [feedback, setFeedback] = useState<"helpful" | "not-helpful" | null>(null)
 
+  const sendFeedback = async (fb: "helpful" | "not-helpful") => {
+    setFeedback(fb)
+    try {
+      await fetch("http://localhost:8000/feedback", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          query: response.answer,
+          engine_used: response.engine,
+          feedback: fb === "helpful" ? 1 : 0
+        })
+      })
+    } catch (e) {
+      // Optionally show error toast
+    }
+  }
+
   return (
     <div className="space-y-6">
       {/* Final Answer */}
@@ -89,14 +106,14 @@ export function ResponsePanel({ response }: ResponsePanelProps) {
         <div className="flex gap-3">
           <Button
             variant={feedback === "helpful" ? "default" : "outline"}
-            onClick={() => setFeedback("helpful")}
+            onClick={() => sendFeedback("helpful")}
             className="flex-1"
           >
             👍 Helpful
           </Button>
           <Button
             variant={feedback === "not-helpful" ? "default" : "outline"}
-            onClick={() => setFeedback("not-helpful")}
+            onClick={() => sendFeedback("not-helpful")}
             className="flex-1"
           >
             👎 Not Helpful

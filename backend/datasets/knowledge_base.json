@@ -1,0 +1,42 @@
+{
+  "facts": [
+    {
+      "keyword": "attendance",
+      "answer": "Minimum attendance required is 75%."
+    },
+    {
+      "keyword": "revaluation",
+      "answer": "Revaluation allows rechecking of answer scripts."
+    },
+    {
+      "question": "What is the minimum attendance required for exams?",
+      "answer": "The minimum attendance required is 75%.",
+      "category": "Attendance",
+      "confidence": 1.0
+    },
+    {
+      "question": "How is CGPA calculated?",
+      "answer": "CGPA is calculated as the weighted average of grade points.",
+      "category": "CGPA",
+      "confidence": 1.0
+    },
+    {
+      "question": "What is the revaluation process?",
+      "answer": "Students can apply for revaluation within 15 days of result declaration.",
+      "category": "Revaluation",
+      "confidence": 1.0
+    },
+    {
+      "question": "What are the exam rules?",
+      "answer": "Students must carry their ID card and hall ticket to the exam hall.",
+      "category": "Exam Rules",
+      "confidence": 1.0
+    },
+    {
+      "question": "How many credits are required per semester?",
+      "answer": "A minimum of 20 credits are required per semester.",
+      "category": "Credits",
+      "confidence": 1.0
+    }
+  ]
+}

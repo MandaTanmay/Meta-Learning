@@ -1,0 +1,40 @@
+query,feedback,domain,intent,engine,timestamp
+Error contacting backend.,0.0,,,ERROR,2026-01-08T11:11:57.483812
+explain about aiml,,STUDENT,EXPLANATION,TRANSFORMER,2026-01-08T11:12:36.820857
+a sluggish sluggish sluggish sluggish sluggish sluggish sluggish sluggish sluggish sluggish sluggish sluggish sluggish sluggish sluggish sluggish sluggish sluggish sluggish sluggish sluggish sluggish sluggish s,0.0,,,TRANSFORMER,2026-01-08T11:12:49.618409
+aiml,,,,,2026-01-08T11:20:11.654846
+Who is the principal of the college?,,STUDENT,EXPLANATION,RETRIEVAL,2026-01-08T11:22:09.955197
+"I'm sorry, I cannot confidently answer this question.",1.0,,,RETRIEVAL,2026-01-08T11:22:16.604667
+What are the hostel rules?,,STUDENT,EXPLANATION,TRANSFORMER,2026-01-08T11:22:41.118994
+How do I apply for a scholarship?,,STUDENT,EXPLANATION,TRANSFORMER,2026-01-08T11:23:34.162870
+What is the placement record for last year?,,,,,2026-01-08T11:24:04.647048
+Are there any sports facilities available?,,,,,2026-01-08T11:25:40.162030
+Are there any sports facilities available?,,,,,2026-01-08T11:25:46.989148
+How can I get a duplicate ID card?,,STUDENT,EXPLANATION,TRANSFORMER,2026-01-08T11:26:09.994945
+You can use a sys card to get a duplicate ID card.,0.0,,,TRANSFORMER,2026-01-08T11:26:14.689136
+What is the process for changing my branch?,,STUDENT,EXPLANATION,TRANSFORMER,2026-01-08T11:26:33.657073
+Changing your branch is the process of changing your branch.,0.0,,,TRANSFORMER,2026-01-08T11:26:54.820252
+Changing your branch is the process of changing your branch.,0.0,,,TRANSFORMER,2026-01-08T11:26:56.463049
+Changing your branch is the process of changing your branch.,1.0,,,TRANSFORMER,2026-01-08T11:26:57.880634
+When does the library open on weekends?,,STUDENT,EXPLANATION,RETRIEVAL,2026-01-08T11:27:00.218189
+How do I register for online courses?,,STUDENT,EXPLANATION,TRANSFORMER,2026-01-08T11:27:19.164199
+Register online.,0.0,,,TRANSFORMER,2026-01-08T11:27:33.181315
+What is the dress code for students?,,,,,2026-01-08T11:27:57.043088
+Capital of France?,,OUT_OF_DOMAIN,,RULE,2026-01-08T11:31:18.259027
+"Sorry, I don’t have information on that topic. Please contact the administration for more details.",1.0,,,RULE,2026-01-08T11:31:33.532589
+"Sorry, I don’t have information on that topic. Please contact the administration for more details.",1.0,,,RULE,2026-01-08T11:31:34.748048
+Latest iPhone price?,,STUDENT,EXPLANATION,TRANSFORMER,2026-01-08T11:31:44.147962
+Latest iPhone price is £20,0.0,,,TRANSFORMER,2026-01-08T11:32:03.523351
+Latest iPhone price is £20,0.0,,,TRANSFORMER,2026-01-08T11:32:04.716666
+Latest iPhone price?,,STUDENT,EXPLANATION,TRANSFORMER,2026-01-08T11:32:07.089397
+Who won the last World Cup?,,STUDENT,EXPLANATION,RETRIEVAL,2026-01-08T11:39:06.327424
+What happens if attendance is below 75%?,,STUDENT,FACTUAL,RETRIEVAL,2026-01-08T11:39:55.642548
+"I'm sorry, I cannot confidently answer this question.",0.0,,,RETRIEVAL,2026-01-08T11:40:28.500798
+Predict my exam marks.,,STUDENT,UNSAFE,RULE,2026-01-08T11:40:59.192886
+Can you change attendance records?,,STUDENT,FACTUAL,RETRIEVAL,2026-01-08T11:42:03.071431
+"Calculate CGPA for 8.2, 7.9, 8.5.",,STUDENT,CALCULATION,RULE,2026-01-08T11:42:30.466600
+Request blocked: Unsafe or blocked query.,0.0,,,RULE,2026-01-08T11:42:49.933988
+What is internal assessment?,,STUDENT,EXPLANATION,TRANSFORMER,2026-01-08T11:47:34.491007
+Explain machine learning.,,STUDENT,EXPLANATION,TRANSFORMER,2026-01-08T11:48:03.350033
+What is revaluation process?,,STUDENT,EXPLANATION,TRANSFORMER,2026-01-08T11:48:50.763535
+Who is current education minister?,,STUDENT,EXPLANATION,RETRIEVAL,2026-01-08T11:49:25.040556

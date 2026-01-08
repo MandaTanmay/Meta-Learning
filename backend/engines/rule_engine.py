@@ -1,2 +1,6 @@
 def rule_engine(reason: str):
-    return f"Request blocked: {reason}."
+    return {
+        "answer": f"Request blocked: {reason}.",
+        "confidence": 1.0,
+        "source": "rule"
+    }

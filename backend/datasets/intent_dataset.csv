@@ -5,19 +5,47 @@ What is attendance requirement?,FACTUAL
 Minimum attendance for exam?,FACTUAL
 What is credit system?,FACTUAL
 How many credits per semester?,FACTUAL
+What is internal assessment?,FACTUAL
+What is revaluation process?,FACTUAL
+What is backlog exam?,FACTUAL
+What is supplementary exam?,FACTUAL
+What is grading system?,FACTUAL
+What is semester system?,FACTUAL
+What is internal marks?,FACTUAL
+What happens if attendance is below 75%?,FACTUAL
+What is exam regulation?,FACTUAL
+
 Calculate CGPA for 80 marks,CALCULATION
 Calculate CGPA for 75 marks with 4 credits,CALCULATION
 Calculate GPA,CALCULATION
 Calculate attendance percentage,CALCULATION
 If present 65 out of 80 days, attendance?,CALCULATION
+Calculate CGPA for 8.2, 7.9, 8.5,CALCULATION
+Attendance percentage for 120 out of 160 days,CALCULATION
+What is 20 multiplied by 8?,CALCULATION
+Add 45 and 32,CALCULATION
+Average of 7, 8, and 9,CALCULATION
+
 Explain machine learning,EXPLANATION
 Explain deep learning,EXPLANATION
 Explain neural networks,EXPLANATION
 Explain meta-learning,EXPLANATION
 Difference between CGPA and GPA,EXPLANATION
 Explain semester system,EXPLANATION
+Explain credit-based system,EXPLANATION
+Explain overfitting,EXPLANATION
+Explain difference between AI and ML,EXPLANATION
+Explain supervised and unsupervised learning,EXPLANATION
+Explain importance of attendance,EXPLANATION
+Explain revaluation process,EXPLANATION
+
 Predict my exam marks,UNSAFE
 Predict my CGPA next semester,UNSAFE
 Hack the exam system,UNSAFE
 Bypass attendance rule,UNSAFE
 Leak question paper,UNSAFE
+How to cheat in exams?,UNSAFE
+Can you change my marks?,UNSAFE
+How to fake attendance?,UNSAFE
+Tell me exam questions in advance,UNSAFE
+Increase my CGPA without studying,UNSAFE

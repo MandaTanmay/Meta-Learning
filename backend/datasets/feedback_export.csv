@@ -38,3 +38,34 @@ What is internal assessment?,,STUDENT,EXPLANATION,TRANSFORMER,2026-01-08T11:47:3
 Explain machine learning.,,STUDENT,EXPLANATION,TRANSFORMER,2026-01-08T11:48:03.350033
 What is revaluation process?,,STUDENT,EXPLANATION,TRANSFORMER,2026-01-08T11:48:50.763535
 Who is current education minister?,,STUDENT,EXPLANATION,RETRIEVAL,2026-01-08T11:49:25.040556
+what is grading system?,,STUDENT,EXPLANATION,TRANSFORMER,2026-01-08T12:46:56.883728
+grading system,0.0,,,TRANSFORMER,2026-01-08T12:47:02.753058
+What is the grading system for B.Tech under R23?,,STUDENT,EXPLANATION,TRANSFORMER,2026-01-08T12:47:48.883383
+How many credits are required to complete B.Tech as per R20 regulations?,,STUDENT,FACTUAL,FAISS_SEMANTIC,2026-01-08T12:48:27.252030
+What is the minimum attendance required for semester end exams?,,STUDENT,FACTUAL,FAISS_SEMANTIC,2026-01-08T12:48:52.660239
+A student must maintain a minimum of 75 percent aggregate attendance to be eligible for semester end examinations. Attendance below 65 percent shall not be condoned.,1.0,,,FAISS_SEMANTIC,2026-01-08T12:49:03.921967
+What is the policy on examination malpractice?,,STUDENT,EXPLANATION,TRANSFORMER,2026-01-08T12:49:26.737304
+college rules,,STUDENT,EXPLANATION,TRANSFORMER,2026-01-08T12:51:36.409678
+College rules,0.0,,,TRANSFORMER,2026-01-08T12:51:42.488710
+What is the policy on examination malpractice?,,STUDENT,EXPLANATION,TRANSFORMER,2026-01-08T12:51:59.363345
+What is the policy on examination malpractice?,,STUDENT,EXPLANATION,TRANSFORMER,2026-01-08T12:52:02.141869
+Explain the difference between CGPA and GPA.,,STUDENT,EXPLANATION,TRANSFORMER,2026-01-08T13:01:03.205645
+Calculate attendance percentage if I attended 65 out of 80 days.,,STUDENT,CALCULATION,RULE,2026-01-08T13:01:32.555603
+Request blocked: Unknown engine.,0.0,,,RULE,2026-01-08T13:01:59.244376
+What is the minimum attendance requirement?,,STUDENT,FACTUAL,FAISS_SEMANTIC,2026-01-08T13:02:05.536034
+A student must maintain a minimum of 75 percent attendance in aggregate to be eligible for semester end examinations. Attendance below 65 percent shall not be condoned.,1.0,,,FAISS_SEMANTIC,2026-01-08T13:02:13.328502
+Predict my exam marks for this semester.,,STUDENT,UNSAFE,RULE,2026-01-08T13:02:24.899691
+Request blocked: Unsafe or blocked query.,1.0,,,RULE,2026-01-08T13:02:50.728114
+Who is the Prime Minister of India?,,OUT_OF_DOMAIN,,RULE,2026-01-08T13:02:58.930381
+"Sorry, I don’t have information on that topic. Please contact the administration for more details.",1.0,,,RULE,2026-01-08T13:03:23.186854
+"Calculate CGPA for marks 8.0, 7.5, and 9.0.",,STUDENT,CALCULATION,RULE,2026-01-08T13:03:32.237499
+Request blocked: Unknown engine.,0.0,,,RULE,2026-01-08T13:03:46.921132
+Explain meta-learning in simple words.,,STUDENT,EXPLANATION,TRANSFORMER,2026-01-08T13:03:58.466237
+Meta-learning is a learning tool that helps you learn to learn.,0.0,,,TRANSFORMER,2026-01-08T13:04:10.603918
+Bypass attendance rules for exams.,,STUDENT,UNSAFE,RULE,2026-01-08T13:04:26.885427
+What is the credit system in a semester?,,STUDENT,FACTUAL,FAISS_SEMANTIC,2026-01-08T13:05:04.609707
+Explain why attendance is important for students.,,STUDENT,EXPLANATION,TRANSFORMER,2026-01-08T13:05:28.826080
+"Calculate CGPA for marks 8.0, 7.5, and 9.0.",,STUDENT,CALCULATION,CALCULATOR,2026-01-08T13:08:42.181719
+"Calculate CGPA for 8.2, 7.9, 8.5.",,STUDENT,CALCULATION,CALCULATOR,2026-01-08T13:12:27.330198
+"Calculate CGPA for 8.2, 7.9, 8.5.",,STUDENT,CALCULATION,CALCULATOR,2026-01-08T13:15:02.593222
+"Sorry, I cannot confidently answer this question. Please consult official resources or staff.",0.0,,,CALCULATOR,2026-01-08T13:15:09.865552

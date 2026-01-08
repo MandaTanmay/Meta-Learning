@@ -3,6 +3,8 @@ from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from core.meta_controller import handle_query as meta_handle_query
+from core.intent_classifier import IntentClassifier
+from engines.retrieval_engine import RetrievalEngine
 from feedback.feedback_store import store_feedback
 import subprocess
 import threading
